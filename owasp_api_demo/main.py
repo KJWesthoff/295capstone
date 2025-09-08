@@ -66,7 +66,7 @@ async def root():
             "interactive_docs": "/docs",
             "openapi_schema": "/openapi.json"
         },
-        "note": "This is an educational API demonstrating security vulnerabilities. Do not use in production."
+        "note": "This is an educational API demonstrating security vulnerabilities. Party On Dude."
     }
 
 if __name__ == "__main__":
