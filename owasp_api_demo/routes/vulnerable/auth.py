@@ -17,7 +17,7 @@ async def login_vulnerable(login_data: LoginRequest):
         raise HTTPException(status_code=401, detail="Invalid credentials")
     
     # VULNERABLE: Plain text password comparison
-    if login_data.password in ["admin123", "password", "secret"]:
+    if login_data.password in ["admin123", "password", "secret", "admin"]:
         token = create_access_token(
             data={"id": user["id"], "username": user["username"], "role": user["role"]},
             expires_delta=timedelta(days=365)  # VULNERABLE: Long expiration
