@@ -28,7 +28,7 @@ async def get_admin_stats_vulnerable(current_user: dict = Depends(get_current_us
     }
 
 @router.get("/data")
-async def get_data_vulnerable(limit: int = 1000000):
+async def get_data_vulnerable(limit: int = 100):
     """VULNERABLE: No rate limiting or resource bounds - API4:2023"""
     results = []
     
